@@ -1,15 +1,30 @@
 #chatList{
     overflow: scroll;
-    height: 500px;
-    border: 1px solid black;
+    height: 406px;
     text-align:center;
+    overflow-x: hidden;
+    background: #7a8ba7;
+
 
 }
+
+  #chatList::-webkit-scrollbar {
+    width: 10px;
+  }
+  #chatList::-webkit-scrollbar-thumb {
+    background-color: #2c3e50;
+    border-radius: 10px;
+  }
+  #chatList::-webkit-scrollbar-track {
+    background-color: #7a8ba7;
+    border-radius: 10px;
+  }
 
 #connected{
     display: inline-block;
     animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     font-family:'lefery';
+    font-family: 'S-CoreDream-5Medium';
 }
 
 
@@ -23,10 +38,11 @@
     padding: 10px;
     margin-right:20px;
     margin-left:20px;
-    background: #6dbbe8;
+    background: #ffffff;
     -webkit-border-radius: 14px;
     -moz-border-radius: 14px;
     border-radius: 14px;
+    font-family: 'S-CoreDream-3Light';
 }
 
 .balloon:after {
@@ -34,12 +50,13 @@
     position: absolute;
     border-style: solid;
     border-width: 12px 0 12px 15px;
-    border-color: transparent #6dbbe8;
+    border-color: transparent #ffffff;
     display: block;
     width: 0;
     z-index: 1;
     right: -10px;
     top: 10px;
+    font-family: 'S-CoreDream-3Light';
 }
 
 .left-balloon {
@@ -50,10 +67,12 @@
     height: auto;
     padding: 10px;
     margin-left:20px;
-    background: #d9d9d9;
+    background: #2c3e50;
     -webkit-border-radius: 14px;
     -moz-border-radius: 14px;
     border-radius: 14px;
+    color: white;
+    font-family: 'S-CoreDream-3Light';
 }
 
 .left-balloon:after {
@@ -61,12 +80,13 @@
     position: absolute;
     border-style: solid;
     border-width: 12px 15px 12px 0px;
-    border-color: transparent #d9d9d9;
+    border-color: transparent #2c3e50;
     display: block;
     width: 0;
     z-index: 1;
     left: -10px;
     top: 10px;
+    font-family: 'S-CoreDream-3Light';
 }
 
 .message{
@@ -125,4 +145,26 @@
 @font-face {
     font-family: 'lefery';
     src: url('../../pages/css/LeferiBaseBold.ttf') format('truetype');
+}
+
+@font-face {
+     font-family: 'S-CoreDream-3Light';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: 'S-CoreDream-4Regular';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: 'S-CoreDream-5Medium';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+     font-size: 40px;
+     font-weight: 400;
+     font-style: normal;
 }

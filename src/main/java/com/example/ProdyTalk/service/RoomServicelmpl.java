@@ -10,7 +10,6 @@ import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 
-
 @Service
 @RequiredArgsConstructor
 public class RoomServicelmpl implements RoomService {

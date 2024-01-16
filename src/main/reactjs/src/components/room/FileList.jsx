@@ -4,6 +4,8 @@ import FileService from '../../service/FileService';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 
+import '../css/Modal.css'
+
 function FileList(props) {
 
     const onDownload = () => {
@@ -19,7 +21,7 @@ function FileList(props) {
     }
 
     return (
-        <div>
+        <div id="fileDown">
             {props.name}.{props.extension} : {props.info}
             <Button variant="contained" color="primary" onClick={onDownload}> 다운로드</Button>
             <IconButton aria-label="delete" size="large" onClick={onDelete}>

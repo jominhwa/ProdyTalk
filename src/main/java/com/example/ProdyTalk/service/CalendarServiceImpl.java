@@ -2,6 +2,7 @@ package com.example.ProdyTalk.service;
 
 import com.example.ProdyTalk.mapper.CalendarMapper;
 import com.example.ProdyTalk.vo.CalendarVO;
+import com.example.ProdyTalk.vo.MyCalendarVO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -34,5 +35,30 @@ public class CalendarServiceImpl implements CalendarService {
     @Override
     public void deleteEvent(CalendarVO calendarVO) {
         calendarMapper.deleteEvent(calendarVO);
+    }
+
+    @Override
+    public List<Calendar> getMyCalendar(String user_id) throws Exception {
+        return calendarMapper.getMyCalendar(user_id);
+    }
+
+    @Override
+    public void addMyEvent(MyCalendarVO myCalendarVO) {
+        calendarMapper.addMyEvent(myCalendarVO);
+    }
+
+    @Override
+    public int searchMyLast() {
+        return calendarMapper.searchMyLast();
+    }
+
+    @Override
+    public void editMyEvent(MyCalendarVO myCalendarVO) {
+        calendarMapper.editMyEvent(myCalendarVO);
+    }
+
+    @Override
+    public void deleteMyEvent(MyCalendarVO myCalendarVO) {
+        calendarMapper.deleteMyEvent(myCalendarVO);
     }
 }

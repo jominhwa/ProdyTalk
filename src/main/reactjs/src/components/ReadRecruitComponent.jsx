@@ -12,7 +12,7 @@ class ReadRecruitComponent extends Component {
         super(props)
         // 상세보기에 사용될 파라미터 정의
         this.state = {
-            recruit_id : this.props.match.params.recruit_id,
+            recruit_id: this.props.match.params.recruit_id,
             recruit: {},
             roleCondition: false,
             isModalOn: false,
@@ -102,6 +102,7 @@ class ReadRecruitComponent extends Component {
 
         openModal(){
             this.setState({isModalOn:true})
+
         };
 
         closeModal() {
@@ -143,7 +144,7 @@ class ReadRecruitComponent extends Component {
         return (
             <div>
                 <div className="readRecruit">
-                     <ChatPage id={this.recruit_id} open={this.state.isModalOn} close={this.closeModal}  header="채팅"> </ChatPage>
+                     <ChatPage id={this.state.recruit_id} open={this.state.isModalOn} close={this.closeModal}  header="채팅"> </ChatPage>
                     <div>
                         {this.returnRecruitType(this.state.recruit.room_type)}
                         <h1> {this.state.recruit.title}</h1>

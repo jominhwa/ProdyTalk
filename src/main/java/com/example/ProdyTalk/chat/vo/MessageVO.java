@@ -1,6 +1,5 @@
 package com.example.ProdyTalk.chat.vo;
 
-import com.example.ProdyTalk.vo.UserVO;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;

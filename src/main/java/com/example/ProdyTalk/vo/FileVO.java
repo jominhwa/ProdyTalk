@@ -11,5 +11,4 @@ public class FileVO {
     String file_info;
     String user_id;
     int room_id;
-
 }

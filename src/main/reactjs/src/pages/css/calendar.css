@@ -1,3 +1,90 @@
 .Calendar{
     background-color:#ffffff;
+    bottom:30px;
+ }
+
+ h2 {
+     font-family: 'Vitro_core';
+ }
+
+ .fc-button-group {
+      font-family: 'ImcreSoojin';
+ }
+
+ button.fc-new-button.fc-button.fc-button-primary {
+      font-family: 'ImcreSoojin';
+ }
+
+ button.fc-today-button.fc-button.fc-button-primary {
+      font-family: 'ImcreSoojin';
+ }
+
+ button.fc-prev-button.fc-button.fc-button-primary {
+      font-family: 'ImcreSoojin';
+ }
+
+ div.fc-view-harness.fc-view-harness-passive {
+     font-family: 'NeoDunggeunmo';
+ }
+
+ a.fc-col-header-cell-cushion {
+    font-size: 1.2em;
+    color: #000000a3;
+    text-decoration: none;
+ }
+
+ .fc .fc-daygrid-day-number {
+    color: black;
+ }
+
+ .fc .fc-button-primary {
+        background-color: #365d9c;
+ }
+
+  .fc .fc-button-primary:not(:disabled):active,
+    .fc .fc-button-primary:not(:disabled).fc-button-active {
+        background-color: #black;
+  }
+
+  .fc-event-title {
+    color: #343232;
+  }
+
+  .fc-event-title.fc-sticky {
+    color: white;
+  }
+
+ @font-face {
+     font-family: 'Vitro_core';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Vitro_core.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: 'ImcreSoojin';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: 'LeferiPoint-WhiteObliqueA';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: 'NeoDunggeunmo';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: 'LeferiPoint-SpecialItalicA';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-SpecialItalicA.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
  }

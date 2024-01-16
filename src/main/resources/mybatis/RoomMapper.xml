@@ -32,7 +32,7 @@
     <select id="getInRooms" resultType="com.example.ProdyTalk.vo.RoomListVO">
         SELECT * from room_list
         WHERE room_id IN
-            <foreach collection="array" item="room_id"  open="(" close=")" separator=",">
+            <foreach collection="array" item="room_id" open="(" close=")" separator=",">
                 #{room_id}
             </foreach>
     </select>
@@ -61,6 +61,6 @@
     <delete id="deleteRoom" parameterType="com.example.ProdyTalk.vo.RoomJoinVO">
         delete from room_join
         where room_id = #{room_id} and user_id=#{user_id}
-
     </delete>
+
 </mapper>

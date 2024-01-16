@@ -44,6 +44,7 @@ table thead th {
 .row {
     margin-left: 10px;
     margin-bottom: 20px;
+        --bs-gutter-x: 0rem;
 }
 
 form > button {
@@ -69,18 +70,22 @@ form > button {
 #writeBtn {
     margin-top: 15px;
     margin-left: 84%;
-    border-radius: 15px;
+    border-radius: 10px;
+        background: #97aaca;
+        border-color: #97aaca;
 }
 
 #saveBtn {
-    background-color: #000;
+    background: #97aaca;
     color: #fff;
-    border: 1px solid #000;
-    border-radius: 15px;
+    border: 1px solid #97aaca;
+    border-radius: 10px;
 }
 
 #cancelBtn {
-    border-radius: 15px;
+    border-radius: 10px;
+    background: black;
+    border: 1px solid black;
 }
 
 .post-title {
@@ -133,7 +138,7 @@ select {
     font-weight: 700;
     font-size: 2em;
     line-height: 1.4444em;
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'S-CoreDream-4Regular';
 }
 
 #author {
@@ -151,13 +156,14 @@ select {
 
 .contentLabel {
     border: 1px solid #dee2e6;
-    width: 80%;
+    width: 700px;
     margin-top: 20px;
     margin-left: 20px;
     margin-bottom: 45px;
 }
 
 .contentLabel pre {
+    margin-top: 10px;
     font-family: 'Nanum Gothic', sans-serif;
 }
 
@@ -197,8 +203,39 @@ select {
     font-family: 'S-CoreDream-6Bold';
 }
 
+.categoryDiv {
+    margin-left: 155px;
+    margin-bottom: 20px;
+}
+
+.col-md-6{
+    width: 100%;
+}
+
 #createRecruitForm {
   font-family: 'Nanum Gothic400';
+}
+
+#category a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#category a:active {
+    color: gray;
+    font-weight: bold;
+}
+
+#readRecruit a:hover {
+    font-weight: bold;
+}
+
+td {
+    cursor: pointer;
+}
+
+#cateLine {
+    color: lightgray;
 }
 
 .pagination { display: flex; justify-content: center; margin-top: 15px; }
@@ -235,6 +272,20 @@ ul.pagination li a:hover, ul.pagination li a.active { color: blue; }
        url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-ExtraBold.woff2) format('woff2'),
        url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-ExtraBold.woff) format('woff'),
        url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-ExtraBold.ttf) format('truetype');
+}
+
+@font-face {
+     font-family: 'S-CoreDream-4Regular';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: 'S-CoreDream-3Light';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
 }
 
 @font-face {

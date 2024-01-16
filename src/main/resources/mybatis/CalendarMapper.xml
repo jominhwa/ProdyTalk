@@ -27,4 +27,28 @@
         delete from calendar where calendar_id = #{calendar_id};
     </delete>
 
+    <select id="getMyCalendar" parameterType="String" resultType="com.example.ProdyTalk.vo.MyCalendarVO">
+        select * from calendar_my where user_id=#{user_id}
+    </select>
+
+    <insert id="addMyEvent" parameterType="com.example.ProdyTalk.vo.MyCalendarVO">
+        insert into calendar_my (title,start,end,color,calendar_id,user_id)
+        values (#{title},#{start},#{end},#{color},#{calendar_id},#{user_id})
+    </insert>
+
+
+    <select id="searchMyLast" resultType="int">
+        SELECT calendar_id FROM calendar_my ORDER BY calendar_id DESC LIMIT 1;
+    </select>
+
+    <update id="editMyEvent" parameterType="com.example.ProdyTalk.vo.MyCalendarVO">
+        update calendar_my
+        set title = #{title}, start = #{start}, end = #{end}, color = #{color}
+        where calendar_id = #{calendar_id};
+    </update>
+
+    <delete id="deleteMyEvent" parameterType="com.example.ProdyTalk.vo.MyCalendarVO">
+        delete from calendar_my where calendar_id = #{calendar_id};
+    </delete>
+
 </mapper>

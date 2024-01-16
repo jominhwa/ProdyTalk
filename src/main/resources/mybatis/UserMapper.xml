@@ -21,7 +21,8 @@
 
     <update id="editUser" parameterType="com.example.ProdyTalk.vo.UserVO">
         update users
-        set user_name=#{user_name}, user_pwd=#{user_pwd}, user_email=#{user_email}, user_phone=#{user_phone}
+        set user_pwd=#{user_pwd}, user_name=#{user_name}, user_email=#{user_email}, user_phone=#{user_phone}
         where user_id=#{user_id}
     </update>
+
 </mapper>

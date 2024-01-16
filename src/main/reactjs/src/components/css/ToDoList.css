@@ -1,0 +1,176 @@
+.todolist{
+    width: 600px;
+    height:1000px;
+    background: white;
+    display: inline-block;
+    border-radius: 4%/ 3%;
+    box-shadow: 0.5px 0.5px 10px 0.2px #b6b6b6;
+
+    cursor: default;
+                          -webkit-touch-callout: none;
+                          -webkit-user-select: none;
+                          -khtml-user-select: none;
+                          -moz-user-select: none;
+                          -ms-user-select: none;
+                          user-select: none;
+
+                          margin-bottom: 20px;
+                          overflow:auto;
+}
+
+.todolist::-webkit-scrollbar{
+  width: 10px;
+  height: 10px
+}
+.todolist::-webkit-scrollbar-thumb{
+  background: linear-gradient(#7a8ba7, #7a8ba7);
+  border-radius: 5px;
+}
+.todolist::-webkit-scrollbar-track{
+  background: white;
+  border-radius: 5px;
+}
+.todolist::-webkit-scrollbar-corner{
+  background: white;
+}
+
+.todolist_add{
+    float: right;
+    display: inline-block;
+    width: 20%;
+    margin-top:50px;
+    margin-right: 20px;
+}
+
+.todolist_content{
+    font-family: 'S-CoreDream-3Light';
+    display: inline-block;
+    font-size:18px;
+    margin-bottom: 0px;
+    text-align: left;
+        margin-left: 11px;
+        margin-right: 10px;
+}
+
+.todolist_gray{
+    font-family: 'S-CoreDream-3Light';
+    display: inline-block;
+    margin-left:5px;
+    font-size:18px;
+    color: gray;
+    text-decoration:line-through;
+        margin-bottom: 0px;
+        text-align: left;
+            margin-left: 11px;
+            margin-right: 10px;
+}
+
+.todolist_title{
+    font-family: 'Vitro_core';
+    font-size: 30px;
+    margin-top: -20px;
+}
+
+.todolist-day{
+    font-family: 'S-CoreDream-5Medium';
+    color:gray;
+    font-size: 20px;
+    margin-left: -166px;
+    margin-top: -15px;
+}
+
+.todolist-num{
+    font-family: 'S-CoreDream-4Regular';
+    margin-right:133px;
+    font-size: 15px;
+    color: green;
+}
+
+.todolist_header{
+    margin-top: 50px;
+    width: 60%;
+    margin-left: -150px;
+    display: inline-block;
+    margin-bottom: -30px;
+}
+
+.todolist_delete{
+    display: inline-block;
+}
+
+.todolist_hr{
+    width: 100%;
+}
+
+.todolist_item{
+    float: left;
+    margin-top: 10px;
+    margin-left: 25px;
+    display:block;
+    margin-right: 160px;
+}
+
+.css-1pg92c4 {
+float: left;
+}
+
+.css-1w8s6so {
+padding: 9px;
+}
+
+.todolist_true{
+    position:static;
+    overflow:hidden;
+    height:auto;
+}
+
+.todolist_false{
+    position:static;
+    overflow:hidden;
+    height:auto;
+}
+
+@font-face {
+  font-family: 'Nanum Gothic500';
+  font-style: normal;
+  font-weight: 500;
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.eot);
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.woff2) format('woff2'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.woff) format('woff'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'lefery';
+    src: url('../../pages/css/LeferiBaseBold.ttf') format('truetype');
+}
+
+@font-face {
+     font-family: 'Vitro_core';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Vitro_core.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: 'S-CoreDream-3Light';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: 'S-CoreDream-4Regular';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: 'S-CoreDream-5Medium';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+     font-size: 40px;
+     font-weight: 400;
+     font-style: normal;
+}

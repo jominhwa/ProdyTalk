@@ -5,7 +5,15 @@
 <mapper namespace="com.example.ProdyTalk.mapper.RecruitMapper">
 
     <select id="findAll" resultType="com.example.ProdyTalk.vo.RecruitVO">
-        SELECT * from recruit
+        SELECT * from recruit ORDER BY recruit_id DESC;
+    </select>
+
+    <select id="findStudy" resultType="com.example.ProdyTalk.vo.RecruitVO">
+        SELECT * from recruit where room_type = '스터디' ORDER BY recruit_id DESC;
+    </select>
+
+    <select id="findProject" resultType="com.example.ProdyTalk.vo.RecruitVO">
+        SELECT * from recruit where room_type = '프로젝트' ORDER BY recruit_id DESC;
     </select>
 
     <insert id="save" parameterType="com.example.ProdyTalk.vo.RecruitVO">

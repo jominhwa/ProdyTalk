@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react';
 import {useState} from 'react';
-import {Button} from '@material-ui/core';
+import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import SockJS from 'sockjs-client';
 import Stomp from 'stompjs';
@@ -18,8 +18,9 @@ import '../css/Chat.css';
 
 function PersonalChatComponent(props) {
 
-    const sock = new SockJS('http://localhost:8080/chat')
-    //const sock = new SockJS('https://pingppung.xyz:3000/chat')
+
+    //const sock = new SockJS('http://localhost:8080/chat')
+    const sock = new SockJS('https://prodytalk.icu:3000/chat')
     const client=Stomp.over(sock);
     const {open, close, header} = props;
     const [list,setList]=useState(null)

@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react';
 import {useState} from 'react';
-import {Button} from '@material-ui/core';
+import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import SockJS from 'sockjs-client';
 import Stomp from 'stompjs';
@@ -14,8 +14,8 @@ import '../css/Chat.css';
 
 function Chat(props) {
 
-    const sock = new SockJS('http://localhost:8080/chat')
-    //const sock = new SockJS('https://pingppung.xyz:3000/chat')
+    //const sock = new SockJS('http://localhost:8080/chat')
+    const sock = new SockJS('https://prodytalk.icu:3000/chat')
     const client=Stomp.over(sock);
 
     const [list,setList]=useState(null)
@@ -26,6 +26,11 @@ function Chat(props) {
     const [children, setChildren]=useState([]);
     const [chatMessage,setChatMessage] = useState("");
     const [changeNum,setChangeNum]=useState(1)
+    const [ScrollY, setScrollY] = useState(0);
+
+    const handleFollow = () => {
+        setScrollY(window.pageYOffset); // window 스크롤 값을 ScrollY에 저장
+      }
 
     const changeMessage = (e) => {
         setChatMessage(e.target.value);
@@ -42,6 +47,9 @@ function Chat(props) {
         }, 1)
     }
 
+    useEffect(() => {
+        console.log("ScrollY is ", ScrollY); // ScrollY가 변화할때마다 값을 콘솔에 출력
+      }, [ScrollY])
 
     useEffect(()=>{
         ChatService.getUserName().then(res => {

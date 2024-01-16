@@ -4,7 +4,7 @@ form {
 
 #loginForm {
     position: absolute;
-    top: 50%; left: 50%;
+    top: 60%; left: 50%;
     margin: -260px 0 0 -210px;
 }
 
@@ -64,7 +64,20 @@ TextField{
     font-size: 1rem;
     border: none;
     border-radius: 10px;
-    background-color: #D0C2E7;
-    color: #464646;
+    background-color: #000000bf;
+    color: white;
+}
+
+.login_circular{
+    width: 100%;
+    height: 100vh;
+    display:table;
+    table-layout: fixed;
+    text-align: center;
+}
+
+.login_content{
+    display: table-cell;
+    vertical-align: middle;
 }
 

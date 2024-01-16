@@ -53,8 +53,8 @@ const RoomModal = (props) => {
                 <div className="form-group">
                     <label htmlFor="taskId" className="col-form-label">방 이름</label>
                     <input type="text" onChange={changeRoomName} className="form-control" value={roomName} id="room_name" name="room_name"/>
-                    <label htmlFor="taskId" className="col-form-label">방 종류</label>
                      <FormControl>
+                        <label htmlFor="taskId" className="col-form-label" id="roomType">방 종류</label>
                           <FormLabel id="demo-controlled-radio-buttons-group"></FormLabel>
                           <RadioGroup
                             row
@@ -68,7 +68,7 @@ const RoomModal = (props) => {
                           </RadioGroup>
                      </FormControl>
                      <br />
-                     <label htmlFor="taskId" className="col-form-label">방 정보</label>
+                     <label htmlFor="taskId" className="col-form-label" id="roomInfo">방 정보</label>
                      <input type="text" onChange={changeRoomInfo} className="form-control" value={roomInfo} id="room_info" name="room_info"/>
 
                 </div>
@@ -82,7 +82,6 @@ const RoomModal = (props) => {
                   close
                 </button>
               </footer>
-
             </section>
           ) : null}
         </div>

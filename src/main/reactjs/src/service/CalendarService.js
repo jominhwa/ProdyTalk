@@ -31,6 +31,37 @@ class CalendarService {
             calendar_id : calId
         })
     }
+
+    // 개인 캘린더
+    getMyCalendar(userId) {
+        return axios.get("/myCalendar", {params: { user_id : userId, }});
+    }
+
+    addMyEvent(content,startDate,endDate,color,userId) {
+        axios.post("/myCalendar/add", {
+            title: content,
+            start: startDate,
+            end: endDate,
+            color: color,
+            user_id: userId,
+        })
+    }
+
+    editMyEvent(calId, editTitle, startDate, endDate, color) {
+        axios.post("/myCalendar/edit", {
+            calendar_id : calId,
+            title : editTitle,
+            start: startDate,
+            end: endDate,
+            color: color
+        })
+    }
+
+    deleteMyEvent(calId) {
+        axios.post("/myCalendar/delete", {
+            calendar_id : calId
+        })
+    }
 }
 
 export default new CalendarService();

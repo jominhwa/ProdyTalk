@@ -3,6 +3,8 @@
 	background-image: url( "../../components/image/background.png" );
 	animation: bg-pan-right 15s infinite both;
     text-align: center;
+    width: 207vh;
+    position: fixed;
 
 	cursor: default;
           -webkit-touch-callout: none;
@@ -12,29 +14,41 @@
           -ms-user-select: none;
           user-select: none;
 }
+.logo {
+    font-size: 130px;
+    color: white;
+    font-family: 'Lobster', cursive;
+    margin-left: 150px;
+    position: absolute;
+    margin-top: 145px;
+}
 
- .logo {
-        margin:50px;
-        text-align: center;
-        display: inline-block;
-        width:220px;
-        height: 200px;
-        border: 6px solid white;
-    }
 .font{
-    font-size:50px;
-    color:white;
-    font-family:'lefery';
+    width: 550px;
+    font-size: 15px;
+    color: white;
+    font-family: 'Nanum Gothic400', sans-serif;
+    text-align: left;
+    margin-left: 150px;
+    margin-top: 345px;
+    position: absolute;
+}
 
-  }
 .button{
     margin:50px;
-
+    position: absolute;
+    margin-left: 150px;
+    margin-top: 500px;
 }
+
+.button button:hover{
+background-color: #97aaca;
+}
+
 .smallfont{
+    font-size: 20px;
     font-family:'lefery';
     font-size:20px;
-
 }
 
 
@@ -56,3 +70,16 @@
     font-family: 'lefery';
     src: url('./LeferiBaseBold.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'Nanum Gothic400';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.eot);
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.woff2) format('woff2'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.woff) format('woff'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.ttf) format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');

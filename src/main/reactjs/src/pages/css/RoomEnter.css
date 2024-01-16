@@ -1,40 +1,63 @@
-.calendar{
-    width:1200px;
+.menu_content{
+    width:56%;
+    background-color:#ffffff;
     display:inline-block;
-    cursor: default;
-              -webkit-touch-callout: none;
-              -webkit-user-select: none;
-              -khtml-user-select: none;
-              -moz-user-select: none;
-              -ms-user-select: none;
-              user-select: none;
+    padding:30px;
+    padding-bottom: 30px;
+    margin-top:20px;
+    border-radius: 1rem;
+    margin-bottom: 30px;
+}
+
+.menu_calendar{
+    background-color: #97aaca;
 }
 
 .roomEnterBack{
-    background-color: #cfe8fc;
-    height:1500px;
-
+    background-color: #97aaca;
+    height:100vh;
 }
 
+.roomName{
+float: left;
+    margin-top: 30px;
+    font-family: 'S-CoreDream-4Regular';
+    margin-left: 20px;
+    color: white;
+}
+
+.todolist_enter{
+    text-align:center;
+    background: #97aaca;
+}
+.textEditor_enter{
+    text-align:center;
+    background: #97aaca;
+}
 #menu{
     text-align: center;
+    font-family: 'Nanum Gothic400', sans-serif;
 }
 
 .chat{
     margin-top:20px;
-    margin-left: 300px;
-    width: 100%;
-
+    background: #97aaca;
 }
 
 .menuitem{
     text-align:center;
-    padding:20px;
 }
 
 .copyButton{
     margin-left: 10px;
+    margin-right: 20px;
     display:inline-block;
+
+}
+
+.copyButton button{
+    height: 30px;
+    font-family: 'S-CoreDream-4Regular';
 }
 
 .showLink{
@@ -44,7 +67,7 @@
     height:30px;
     text-align:center;
     padding-top:3px;
-    border-radius: 5% / 20%;
+    border-radius: 0.5rem;
     font-family: 'ChungbukNationalUniversity-Regular';
 }
 
@@ -54,4 +77,22 @@
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/ChungbukNationalUniversity-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nanum Gothic400';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.eot);
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.woff2) format('woff2'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.woff) format('woff'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.ttf) format('truetype');
+}
+
+@font-face {
+     font-family: 'S-CoreDream-4Regular';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
 }

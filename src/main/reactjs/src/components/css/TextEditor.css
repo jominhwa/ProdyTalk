@@ -1,0 +1,17 @@
+.main-content {
+    width: 85%;
+    top: 280px;
+    left: 8%;
+    height: 60%;
+    background: white;
+    display: inline-block;
+    border-radius: 4%/ 3%;
+    box-shadow: 0.5px 0.5px 10px 0.2px #b6b6b6;
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.ql-toolbar.ql-snow + .ql-container.ql-snow{
+    height: 85%
+}

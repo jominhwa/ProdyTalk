@@ -1,0 +1,308 @@
+/*화상채팅 들어가기 전 세팅화면*/
+#logo-img{
+  text-align: center;
+}
+
+#logo-img img{
+  width: 90px;
+}
+
+
+.form {
+    text-align: center;
+    margin: -40px 0 0 0;
+    position: relative;
+    font-family: 'S-CoreDream-4Regular';
+}
+.video-on video{
+  width: 400px;
+}
+
+.video-off {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 300px;
+    background-color: #6e6e6e;
+    position: relative;
+    margin: auto;
+    margin-bottom: 0.4rem;
+}
+
+
+.video-off .anticon.anticon-audio-muted {    /*카메라 켜져있는 상태에서의 음소거 상태 표시*/
+    transform: translate(120px, 125px);
+    color: red;
+}
+
+.video-on .anticon.anticon-audio-muted {
+    color: red;
+    transform: translate(-25px, -20px);
+}
+.form select{
+  height: 40px;
+  border-radius: 0.25rem;
+  color: #000;
+  width: 320px;
+  font-family: 'S-CoreDream-4Regular';
+}
+
+#userName, #sessionId{
+  display: inline;
+  width: 220px;
+  height: 40px;
+}
+
+#buttonSetAudio, #buttonSetVideo{
+background-color: #97aaca;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 6px;
+    color: #fff;
+    font-size: 13px;
+    height: 30px;
+    padding: 0;
+    width: 100px;
+    margin: 8px 0 15px 0;
+}
+
+#buttonSetAudio:hover{
+    background: #7a8ba7;
+}
+
+#buttonSetVideo:hover{
+    background: #7a8ba7;
+}
+
+#buttonJoin{
+  width: 60px;
+  border-radius: 6px;
+  border: solid 1px rgba(0,0,0,.15);
+  background-color: #97aaca;
+  font-size: 13px;
+  color: #fff;
+  height: 40px;
+  padding: 0px 0 0px;
+}
+
+#buttonJoin:hover{
+    background: #7a8ba7;
+}
+
+/*화상채팅 내부*/
+/*video enter*/
+#videoroom{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #97aaca;
+  text-align: center;
+  font-family: 'S-CoreDream-4Regular';
+}
+/*#videoroom p{
+  color: #fff;
+}
+*/
+#main-video {
+  position: fixed;
+  height: 85%;
+  width: 70%;
+  top: 0%;
+  left: 1.5%;
+  text-align: center;
+}
+
+#main-video video{
+  position: absolute;
+  transform: translateX(-50%);
+  height: auto;
+  width: 70%;
+  top: 1%;
+  box-shadow:0.5px 0.5px 10px 0.2px #000000;
+  background: #000000;
+  align-items: center;
+  margin-top: 2.5%;
+}
+
+#main-video p, #main-video span{
+  /*width: 100%;
+  position: fixed;
+  text-align: center;
+  left: 0px;
+  background-color: #bfc8e1;
+  height: 26px;
+  */
+  display: none;
+}
+/*
+#main-video .streamcomponent div{
+  position: fixed;
+}
+*/
+#video-container-Grid {
+    z-index: 1;
+    margin-top: 1%;
+    width: 100%;
+    height: 85%;
+    display: GRID;
+    grid-template-columns: repeat(auto-fit, minmax(25%, auto));
+    grid-template-rows: repeat(auto-fit, minmax(30%, auto));
+}
+#video-container-Focus {
+  height: 81%;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 1%;
+  width: 27%;
+  margin-right:1%;
+}
+#video-container-Grid video {
+  margin-top: 5%;
+  max-width: 100%;
+}
+#video-container-Focus video {
+  height: 100%;
+  width: 100%;
+  top: 5%;
+  border-radius: 0.5rem;
+}
+.video-username {
+    background: white;
+    transform: translate(5px,-40px);
+    width: fit-content;
+    margin: auto;
+    padding: 0px 10px 0 10px;
+    border-radius: 20px;
+    position: absolute;
+    display:none;
+}
+.video-username p {
+    margin: 0;
+}
+.streamcomponent:hover .video-username{
+    display:block;
+}
+#video-container-Focus .video-audiostate {
+    transform: translateY(-40px);
+    position: absolute;
+    margin-left: 90%;
+}
+#video-container-Grid .video-audiostate {
+    transform: translate(45%, -38px);
+}
+.streamcomponent span { /*음소거 표시 빨간색으로*/
+    color: red;
+}
+
+#video-container-Focus::-webkit-scrollbar{
+  width: 10px;
+  height: 10px
+}
+#video-container-Focus::-webkit-scrollbar-thumb{
+  background: linear-gradient(#ffffff, #ffffff);
+  border-radius: 5px;
+}
+#video-container-Focus::-webkit-scrollbar-track{
+  background: #7a8ba7;
+  border-radius: 5px;
+}
+#video-container-Focus::-webkit-scrollbar-corner{
+  background: #97aaca;
+}
+
+#footer {
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    width: 75%;
+    height: 15%
+}
+
+#footer button {
+    background-color: #7a8ba7;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 100%;
+    color: #fff;
+    font-size: 13px;
+    height: 45px;
+    margin: 4% 2px;
+    padding: 0;
+    width: 45px;
+}
+
+#session-title{
+  display: inline;
+  vertical-align: middle;
+  color: #97aaca;
+}
+
+#footer button span{
+  font-size: 25px;
+}
+#buttonMuteAudio, #buttonOnVideo, #buttonShare, #buttonLeaveSession {
+    background-color: #ce4f5b!important;
+}
+
+.memberList {
+    width: 27%;
+    background: #7a8ba7;
+    height: 15%;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    margin-right: 1%;
+}
+
+.memberList p{
+    color: white;
+}
+
+.memberList::-webkit-scrollbar{
+  width: 10px;
+  height: 10px;
+}
+.memberList::-webkit-scrollbar-thumb{
+  background: linear-gradient(white, white);
+  border-radius: 5px;
+}
+.memberList::-webkit-scrollbar-track{
+  background: #7a8ba7;
+  border-radius: 5px;
+}
+.memberList::-webkit-scrollbar-corner{
+  background: #282828;
+}
+
+#footer button:hover{
+  color: #fff;
+  background: #7a8ba7;
+  opacity: 0.9;
+}
+#footer button:hover .button-text{
+  display: block;
+}
+.button-text {
+  display: none;
+  position: absolute;
+  max-width: auto;
+  border: 1px solid;
+  border-radius: 5px;
+  font-size: 15px!important;
+  color: white;
+  background: gray;
+  transform: translate(-15px, -50px)
+}
+
+@font-face {
+     font-family: 'S-CoreDream-4Regular';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+
+

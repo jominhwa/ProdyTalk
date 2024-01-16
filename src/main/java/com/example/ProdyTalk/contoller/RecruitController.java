@@ -21,8 +21,20 @@ public class RecruitController {
 
     // get all recruit
     @GetMapping("/recruit")
-    public List<RecruitVO> getAllRecruits() {
-        return recruitService.getAllRecruit();
+    public List<RecruitVO> getAllRecruits(Integer recruit_id) {
+        return recruitService.getAllRecruit(recruit_id);
+    }
+
+    // get study recruit
+    @GetMapping("/recruit/study")
+    public List<RecruitVO> getStudyRecruits(Integer recruit_id) {
+        return recruitService.getStudyRecruit(recruit_id);
+    }
+
+    // get project recruit
+    @GetMapping("/recruit/project")
+    public List<RecruitVO> getProjectRecruits(Integer recruit_id) {
+        return recruitService.getProjectRecruit(recruit_id);
     }
 
     @PostMapping("/recruit")

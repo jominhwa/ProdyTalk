@@ -12,6 +12,7 @@ import RoomListComponent from '../components/room/RoomListComponent.jsx'
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import HomeIcon from '@mui/icons-material/Home';
 import TextField from '@mui/material/TextField';
+import CalendarIcon from "../components/image/calendar.png"
 import RoomCreate from '../components/room/RoomCreate'
 import base64 from 'base-64';
 import axios from 'axios';
@@ -61,15 +62,23 @@ function MainPage({history}) {
             </div>
 
                 <div>
-                    <RoomCreate />
+                     <div id="myroomlist">마이룸</div>
+                    <hr style={{ height: '5px', color: '#97aaca', opacity: '1', margin: '0 1000px 0 25px', width: '450px' }}></hr>
                     <RoomListComponent />
                 </div>
                 <br />
                 <div className="menu">
+                    <RoomCreate />
                     <Link to="/recruit" style={{ textDecoration: 'none', color:'black' }} >
-                        <div className="recruit">
-                            <PeopleAltIcon fontSize="large" /><br />
-                            모집게시판
+                         <div className="recruit">
+                             <PeopleAltIcon fontSize="large" /><br />
+                             모집게시판
+                         </div>
+                    </Link>
+                    <Link to="/myCalendar" style={{ textDecoration: 'none', color:'black' }}>
+                        <div className="myCalendar">
+                            <img src={CalendarIcon} alt="CalendarIcon" width= "25px"/><br />
+                            스케줄
                         </div>
                     </Link>
                     <Link to="/mypage" style={{ textDecoration: 'none', color:'black' }}>

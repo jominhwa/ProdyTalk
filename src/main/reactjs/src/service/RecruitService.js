@@ -2,9 +2,19 @@ import axios from 'axios';
 
 class RecruitService {
 
-    // 글 목록 데이터 가져옴
-    getRecruits() {
+    // 전체글 목록 데이터 가져옴
+    getRecruits(recruit_id) {
         return axios.get("/recruit");
+    }
+
+    // 스터디 글 목록 데이터 가져옴
+    getRecruitsStudy(recruit_id) {
+        return axios.get("/recruit/study");
+    }
+
+    // 프로젝트 글 목록 데이터 가져옴
+    getRecruitsProject(recruit_id) {
+        return axios.get("/recruit/project");
     }
 
     // 글 작성

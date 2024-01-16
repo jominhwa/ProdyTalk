@@ -3,27 +3,17 @@ package com.example.ProdyTalk.contoller;
 import com.example.ProdyTalk.mapper.FileMapper;
 import com.example.ProdyTalk.service.FileService;
 import com.example.ProdyTalk.vo.FileVO;
-import com.example.ProdyTalk.vo.RoomJoinVO;
-import com.example.ProdyTalk.vo.RoomListVO;
-import io.jsonwebtoken.Jwts;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.InputStreamResource;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
-import java.net.URLEncoder;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
-import java.util.UUID;
 
 @CrossOrigin(origins="*",maxAge = 3600)
 @RestController
@@ -39,7 +29,8 @@ public class FileController {
             @RequestParam(value="files") MultipartFile[] uploadFile,
             @RequestParam(value="file_info") String fileInfo,
             @RequestParam(value="room_id") int roomId, Model model){
-       String uploadFolder = "E:\\storage";
+       //String uploadFolder = "E:\\storage";
+       String uploadFolder = "/home/ubuntu/uploadFile";
        for(MultipartFile multipartFile : uploadFile) {
            String fileId = (new Date().getTime()) + "" + (new Random().ints(1000, 9999).findAny().getAsInt()); // 현재 날짜와 랜덤 정수값으로 새로운 파일명 만들기
            String originName = multipartFile.getOriginalFilename(); // ex) 파일.jpg
@@ -50,7 +41,6 @@ public class FileController {
            System.out.println("name=" + originName);
            System.out.println("size=" + fileSize);
            System.out.println("file_info=" + fileInfo);
-
 
            File savefile = new File(uploadFolder, fileId + "." + fileExtension);
            if(!savefile.exists()) {
@@ -92,7 +82,11 @@ public class FileController {
 
         String originName=fileVO.getOrigin_name()+"."+fileVO.getExtension();
         String fileName = fileVO.getFile_id()+"."+fileVO.getExtension();
-        String path="E:\\storage\\"+fileName;
+        //String path="E:\\storage\\"+fileName;
+
+        String path="/home/ubuntu/uploadFile/"+fileName;
+
+        System.out.println(path);
 
         File file = new File(path);
 

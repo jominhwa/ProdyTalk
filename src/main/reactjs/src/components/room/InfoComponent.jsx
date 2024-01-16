@@ -8,7 +8,6 @@ import Box from '@mui/material/Box';
 import '../css/RoomInfo.css'
 import {useAsync} from 'react-async';
 
-
 function InfoComponent(props) {
     const [total,setTotal]=useState("")
     const [member,setMember]=useState([])
@@ -35,7 +34,8 @@ function InfoComponent(props) {
                  RoomService.deleteRoom(props.roomId)
 
                  setTimeout(() => {
-                     window.location.href="http://localhost:3000/main"
+                     //window.location.href="http://localhost:3000/main"
+                     window.location.href="https://prodytalk.icu:3000/main"
                  },1000);
 
              } else {
@@ -61,7 +61,7 @@ function InfoComponent(props) {
     <div style={{textAlign: 'center'}}>
     {
         loading === true
-        ? <div>
+        ? <div className="infoBack">
             <div className="infoBigDiv">
                 <div className="smallDiv">
                     <p className="total">팀원 인원수</p>
@@ -73,7 +73,7 @@ function InfoComponent(props) {
 
                 </div>
                 <div className="smallDiv">
-                    <p className="total">프로젝트 요약</p>
+                    <p className="total">프로젝트 설명</p>
                     <p className="projectInfo">{info}</p>
                     <div className="deleteRoom">
                         <Button variant="contained" color="error" onClick={onDeleteRoom}>방 나가기</Button>
@@ -89,7 +89,6 @@ function InfoComponent(props) {
 
       }
     </div>
-
     );
 }
 

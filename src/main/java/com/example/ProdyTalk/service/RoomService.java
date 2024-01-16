@@ -30,5 +30,4 @@ public interface RoomService {
     public List<RoomJoinVO> getMemberById(int room_id);
 
     public void deleteRoom(RoomJoinVO roomJoinVO);
-
 }

@@ -33,8 +33,9 @@ function MyPage() {
         setModalOpen(false); // modal close
     };
 
-        const addModal = (user_id,user_name,user_pwd,user_email,user_phone) => {
+        const addModal = (user_id,user_pwd,user_name,user_email,user_phone) => {
             UserService.editUser(user_id,user_name,user_pwd,user_email,user_phone)
+
             setModalOpen(false); // Modal 닫아주기
             window.alert("수정 완료!")
         };
@@ -71,31 +72,35 @@ function MyPage() {
     useEffect(() => {
         getData()
     },)
-
+                    //<div className="userId"><KeyIcon sx={{fontSize: 40, marginRight:1, color: '#2c3e50'}} />  비밀번호 : {userPwd}</div>
     return (
     <div>
-        <div style={{backgroundColor: '#cfe8fc', height: '100vh', textAlign: 'center'}}>
+        <div style={{height: '100vh', textAlign: 'center'}}>
             <Header />
             { loading === true
             ? <div className="circular"><CircularProgress /></div>
             :<div className="box">
+            <div id="mypage">마이페이지</div>
+            <hr style={{ height: '5px', color: '#97aaca', opacity: '1', margin: '0 1000px 0 25px', width: '450px' }}></hr>
                 <div className="miniBox"></div>
-                <p className="basicProfile"><img src={basicProfile} alt="basicProfile" style={imagestyle} />
+                <MyPageModal userId={userId} open={modalOpen} close={closeModal} propFunction={addModal} header="마이페이지 정보수정"> </MyPageModal>
+                <p className="basicProfile">
                     <br /> {userId}님, 안녕하세요!</p>
                 <div className="infoBox">
-                    <div className="userId"><AccountCircleIcon sx={{fontSize: 40, marginRight:1, color:blue[200]}} />  아이디 : {userId}</div>
-                    <div className="userId"><KeyIcon sx={{fontSize: 40, marginRight:1, color:blue[200]}} />  비밀번호 : {userPwd}</div>
-                    <div className="userId"><BadgeIcon sx={{fontSize: 40, marginRight:1, color:blue[200]}} />  이름 : {userName}</div>
-                    <div className="userId"><EmailIcon sx={{fontSize: 40, marginRight:1, color:blue[200]}} />  이메일 : {userEmail}</div>
-                    <div className="userId"><LocalPhoneIcon sx={{fontSize: 40, marginRight:1, color:blue[200]}} />  핸드폰 : {userPhone}
+                    <div className="userId"><AccountCircleIcon sx={{fontSize: 40, marginRight:1, color: '#2c3e50'}} />  아이디 : {userId}</div>
+                    <div className="userId"><BadgeIcon sx={{fontSize: 40, marginRight:1, color: '#2c3e50'}} />  이름 : {userName}</div>
+                    <div className="userId"><EmailIcon sx={{fontSize: 40, marginRight:1, color: '#2c3e50'}} />  이메일 : {userEmail}</div>
+                    <div className="userId"><LocalPhoneIcon sx={{fontSize: 40, marginRight:1, color: '#2c3e50'}} />  핸드폰 : {userPhone}
                         <div className="editButton"><Button variant="outlined" size="large" onClick={openModal}><p className="editButton">수정</p></Button></div>
                     </div>
 
-                    <MyPageModal userId={userId} open={modalOpen} close={closeModal} propFunction={addModal} header="마이페이지 정보수정"> </MyPageModal>
+                    <MyPageModal userId={userId} userPwd={userPwd} userName={userName} userEmail={userEmail} userPhone={userPhone} open={modalOpen} close={closeModal} propFunction={addModal} header="마이페이지 정보수정"> </MyPageModal>
+
                  </div>
+                 <Link to="/main" id="homeBtn"><img src={Home} style={homeImageStyle}/></Link>
             </div>
             }
-            <Link to="/main" id="homeBtn"><img src={Home} style={homeImageStyle}/></Link>
+
         </div>
 
     </div>

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './css/Header.css';
 import Logo from "./image/LogoWhite.png";
-import {Button} from '@material-ui/core';
 import { Link,withRouter } from "react-router-dom";
 import User from "./image/UserIcon.png";
 import UserService from '../service/UserService'
+import Button from '@mui/material/Button';
 
 class HeaderComponent extends Component {
     constructor(props) {
@@ -41,8 +41,18 @@ class HeaderComponent extends Component {
 
         return (
             <div className="body">
+                <Link to={{
+                    pathname:`/first/${true}`,
+                    state:`${true}`
+                    }}
+                style={{ textDecoration: 'none' }}>
+
+                <div className="logout">
+                    <Button variant="outlined" color="primary" >로그아웃</Button>
+                </div>
+                </Link>
                 <div className="mainlogo">
-                    <Link to="/main"><img src={Logo} alt="logo" style={imagestyle}/></Link>
+                    <Link to="/main"><img src={Logo} alt="logo" /></Link>
                 </div>
             </div>
         );

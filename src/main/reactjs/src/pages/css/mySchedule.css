@@ -1,0 +1,27 @@
+.mySchedule{
+    background-color:#97aaca;
+    height:auto;
+    width:100%;
+    text-align:center;
+
+}
+
+.mySchedule_calendar{
+    width:100%;
+    text-align:center;
+}
+
+.mySchedule_content{
+    width:56%;
+    background-color:#ffffff;
+    display:inline-block;
+    padding:40px;
+    margin-top:20px;
+    border-radius: 1rem;
+    margin-bottom: 30px;
+}
+
+.mySchedule_todolist{
+    display:inline-block;
+    margin-top: 20px;
+}

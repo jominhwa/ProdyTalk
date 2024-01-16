@@ -26,5 +26,4 @@ public class FileServicelmpl implements FileService {
     public void deleteFile(String file_id) {
         fileMapper.deleteFile(file_id);
     }
-
 }

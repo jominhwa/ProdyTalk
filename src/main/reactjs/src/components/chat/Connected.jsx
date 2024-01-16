@@ -1,9 +1,7 @@
 import React from 'react';
 import '../css/Chat.css';
 
-
 function Connected(props) {
-
     return (
     <div>
         <div id="connected">

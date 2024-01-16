@@ -1,71 +1,103 @@
-.infoBigDiv{
-    text-align:center;
-    display:inline-block;
-    margin-right:23px;
-    background-color: #9fc5e8;
-    width: 1000px;
-    height: 500px;
-
-    cursor: default;
-              -webkit-touch-callout: none;
-              -webkit-user-select: none;
-              -khtml-user-select: none;
-              -moz-user-select: none;
-              -ms-user-select: none;
-              user-select: none;
+.infoBack{
+    background: #7a8ba7;
 }
 
+.infoBigDiv{
+    height: auto;
+    width: 300px;
+    display: inline;
+}
 .smallDiv{
-
-    float:left;
-    width:315px;
-    height:470px;
     background-color: #FFFFFF;
-    margin:5px;
-    margin-left:11px;
-    margin-top:14px;
-    text-align:center;
+        display: inline-grid;
+        margin: 10px 10px 10px 10px;
+        width: 302px;
+height: 473px;
+}
 
+.teamId hr{
+height: 0.5px;
+}
 
+.teamId{
+overflow: auto;
+}
+
+.teamId::-webkit-scrollbar{
+  width: 10px;
+  height: 10px
+}
+.teamId::-webkit-scrollbar-thumb{
+  background: linear-gradient(#97aaca, #97aaca);
+  border-radius: 5px;
+}
+.teamId::-webkit-scrollbar-track{
+  background: white;
+  border-radius: 5px;
+}
+.teamId::-webkit-scrollbar-corner{
+  background: white;
+}
+
+.projectInfo{
+  overflow: auto;
+}
+
+.projectInfo::-webkit-scrollbar{
+  width: 10px;
+  height: 10px
+}
+.projectInfo::-webkit-scrollbar-thumb{
+  background: linear-gradient(#97aaca, #97aaca);
+  border-radius: 5px;
+}
+.projectInfo::-webkit-scrollbar-track{
+  background: white;
+  border-radius: 5px;
+}
+.projectInfo::-webkit-scrollbar-corner{
+  background: white;
 }
 
 p.total{
     font-size:25px;
     margin: 10px;
-    font-family:'lefery';
+    font-family: 'S-CoreDream-5Medium';
     text-align:center;
 }
 
 p.totalNum{
     font-size:200px;
-    color:#3d85c6;
-    font-family:'lefery';
+    color:#2c3e50;
+    font-family: 'S-CoreDream-5Medium';
 }
 
 p.projectInfo{
     margin:20px;
-    font-family: 'ChungbukNationalUniversity-Regular';
-
+    font-family: 'S-CoreDream-5Medium';
     font-size:25px;
 }
 
 li{
     font-size:40px;
     list-style:none;
-    font-family: 'ChungbukNationalUniversity-Regular';
+    font-family: 'S-CoreDream-5Medium';
 
+}
+
+.deleteRoom button{
+    background: #97aaca;
+    border-color: #97aaca;
+    font-family: 'S-CoreDream-4Regular';
+}
+
+.deleteRoom button:hover{
+    background: #ce4f5b;
 }
 
 hr.member{
     margin-left:25px;
     width:260px;
-}
-
-.deleteRoom{
-    position:absolute;
-    top:700px;
-    left:1225px;
-
 }
 
 @font-face {
@@ -78,4 +110,15 @@ hr.member{
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/ChungbukNationalUniversity-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nanum Gothic400';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.eot);
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.woff2) format('woff2'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.woff) format('woff'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.ttf) format('truetype');
 }
